@@ -35,7 +35,7 @@
     <div class="hero__text">
       <p class="eyebrow rise">Full-stack engineer · Bangkok, UTC+7</p>
       <h1 class="hero__title rise">Oleg Pustogachev</h1>
-      <p class="hero__lede rise">Seven years of engineering, from GPU code to product. Now I build diffuza, real-time AI visuals for live events, including its renderer. Before that I built and ran cnvrg, a multi-agent platform, on my own, and worked on Shadow Fight: Shades at Banzai Games.</p>
+      <p class="hero__lede rise">I work on diffuza, real-time AI visuals for live events: the renderer, the studio and the MCP server. Before that I built cnvrg, a multi-agent platform, and spent two years on Shadow Fight: Shades at Banzai Games.</p>
       <p class="label hero__avail rise"><span class="dot" aria-hidden="true"></span>Open to founding, senior and lead roles · remote</p>
     </div>
     <div class="hero__shots rise rise--late">
@@ -43,12 +43,6 @@
       <a class="shot" href="#cnvrg"><img src="media/cn-graph-ui.webp" alt="cnvrg graph" width="1800" height="1125"><span class="label">cnvrg · graph</span></a>
       <a class="shot" href="#games"><img src="media/gd-spine.webp" alt="SPINE" width="1920" height="1080"><span class="label">SPINE · Unity prototype</span></a>
     </div>
-  </section>
-
-  <section class="stats" aria-label="Numbers">
-    <div class="stat"><b>30 fps</b><span class="label">diffuza renderer · 512×896 · one GPU</span></div>
-    <div class="stat"><b>860+</b><span class="label">cnvrg sign-ups</span></div>
-    <div class="stat"><b>10M+</b><span class="label">Shadow Fight: Shades downloads</span></div>
   </section>
 
   <!-- diffuza -->
@@ -121,9 +115,9 @@
       </video>
     </figure>
     <div class="work__body reveal">
-      <p class="work__lede">A multi-agent platform where people and AI agents write into one shared knowledge graph. Agents run on schedules, call tools, generate images, build pipelines for diffuza and open changes to the platform’s code. I built and ran it alone. The clip is a screen recording of the public graph on cnvrg.xyz, November 2026.</p>
+      <p class="work__lede">A multi-agent platform where people and AI agents write into one shared knowledge graph. Agents run on schedules, call tools, generate images, build pipelines for diffuza and open changes to the platform’s code. The clip is a screen recording of the public graph on cnvrg.xyz, November 2026.</p>
       <ul class="facts">
-        <li><b>860+</b>sign-ups. 225 agents wrote 14,000+ of the graph’s 24,000 nodes and completed 8,000+ scheduled tasks.</li>
+        <li><b>Usage</b>860+ sign-ups. 225 agents wrote 14,000+ of the graph’s 24,000 nodes and completed 8,000+ scheduled tasks.</li>
         <li><b>9 model backends</b>behind one streaming interface: OpenAI, Anthropic, Gemini, xAI, OpenRouter and a self-hosted model on my own GPU. About 9,500 logged calls with per-call cost.</li>
         <li><b>Agent coding</b>Agents open coding tasks; Claude Code works in a separate git worktree, then a merge request, a staging deploy and a check in Chrome by a computer-use agent. 53 agent-written commits are on main.</li>
         <li><b>Graph renderer</b>Third version, after React Flow and Canvas 2D: instanced WebGL with level of detail, quadtree hit-testing and layout in a Web Worker. Also 13 Docker services, CI, Prometheus, Loki, Grafana, an MCP server and a Solana token layer.</li>
