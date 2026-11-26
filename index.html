@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Oleg Pustogachev · Full-stack Engineer</title>
+<meta name="description" content="Oleg Pustogachev, full-stack engineer. Real-time AI rendering (diffuza), a multi-agent platform (cnvrg), Unity games (Shadow Fight: Shades).">
+<meta property="og:title" content="Oleg Pustogachev · Full-stack Engineer">
+<meta property="og:description" content="Oleg Pustogachev, full-stack engineer. Real-time AI rendering (diffuza), a multi-agent platform (cnvrg), Unity games (Shadow Fight: Shades).">
+<meta property="og:image" content="https://inkpaper.xyz/media/dz-reel.jpg">
+<meta property="og:url" content="https://inkpaper.xyz/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://inkpaper.xyz/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Geist:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
+<link rel="stylesheet" href="tokens.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="nav__brand" href="#top">Oleg Pustogachev</a>
+  <nav class="nav__links label" aria-label="Sections">
+    <a href="#diffuza">diffuza</a><a href="#cnvrg">cnvrg</a><a href="#games">games</a><a href="#other">other</a>
+  </nav>
+  <a class="btn btn--accent" href="https://calendly.com/oleg-pustogachev/30min" target="_blank" rel="noopener">Book a call</a>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="hero__text">
+      <p class="eyebrow rise">Full-stack engineer · Bangkok, UTC+7</p>
+      <h1 class="hero__title rise">Oleg Pustogachev</h1>
+      <p class="hero__lede rise">Seven years of engineering, from GPU code to product. Now I build diffuza, real-time AI visuals for live events, including its renderer. Before that I built and ran cnvrg, a multi-agent platform, on my own, and worked on Shadow Fight: Shades at Banzai Games.</p>
+      <p class="label hero__avail rise"><span class="dot" aria-hidden="true"></span>Open to founding, senior and lead roles · remote</p>
+    </div>
+    <div class="hero__shots rise rise--late">
+      <a class="shot" href="#diffuza"><img src="media/dz-ui-1.webp" alt="diffuza studio" width="2000" height="1267"><span class="label">diffuza · studio</span></a>
+      <a class="shot" href="#cnvrg"><img src="media/cn-graph-ui.webp" alt="cnvrg graph" width="1800" height="1125"><span class="label">cnvrg · graph</span></a>
+      <a class="shot" href="#games"><img src="media/gd-spine.webp" alt="SPINE" width="1920" height="1080"><span class="label">SPINE · Unity prototype</span></a>
+    </div>
+  </section>
+
+  <section class="stats" aria-label="Numbers">
+    <div class="stat"><b>30 fps</b><span class="label">diffuza renderer · 512×896 · one GPU</span></div>
+    <div class="stat"><b>860+</b><span class="label">cnvrg sign-ups</span></div>
+    <div class="stat"><b>10M+</b><span class="label">Shadow Fight: Shades downloads</span></div>
+  </section>
+
+  <!-- diffuza -->
+  <article class="work" id="diffuza">
+    <header class="work__head reveal">
+      <h2>diffuza</h2>
+      <p class="label work__meta">Founding full-stack engineer · Mar 2026 — now · diffuza.com</p>
+    </header>
+    <figure class="stage stage--wide reveal">
+      <video data-autoplay muted loop playsinline preload="none" poster="media/dz-reel.jpg" width="1280" height="720">
+        <source src="media/dz-reel.mp4" type="video/mp4">
+      </video>
+      <button class="soundbtn label" type="button" aria-pressed="false">Sound off</button>
+    </figure>
+    <div class="work__body reveal">
+      <p class="work__lede">Real-time AI visuals for clubs, festivals and installations. The image follows the music and is controlled from a browser studio. I work on all of it: the renderer, the studio, cloud GPU rigs and the MCP server. It has been used at <span class="proof" tabindex="0" aria-describedby="venues">events in Bangkok<span class="proof__tip" role="tooltip" id="venues">Unfest, BerlinBKK, Avve, Dual, Soho House Bangkok; nights by Sacristy, ALTER EGO and COUNTERCULTURAL.</span></span> since spring 2026.</p>
+      <ul class="facts">
+        <li><b>Renderer</b>SDXL-Turbo stream diffusion on TensorRT, written to replace the third-party engine the project started with. 30 fps at 512×896 on one RTX 5080, with latent feedback, IP-Adapter, ControlNet and depth.</li>
+        <li><b>Optimisation</b>Full-VAE frame from 129 to 55 ms: static-shape TensorRT engines, so GroupNorm fusion works; CUDA graphs; a small refiner I trained so the fast decoder gets close to full-VAE quality.</li>
+        <li><b>MCP server</b>16 tools. Claude, ChatGPT or Codex can read and change pipelines, inputs, clock, renderer and DMX lights, and take a screenshot of the render machine.</li>
+        <li><b>Studio</b>Multi-user browser studio, cloud GPU rigs on Runpod with credits and billing, a desktop app for the venue PC, 30 input modules from beat detection to hand tracking.</li>
+      </ul>
+    </div>
+    <div class="pair reveal">
+      <figure class="card card--wide" data-lightbox>
+        <img src="media/dz-ui-1.webp" alt="diffuza studio during a set: render engine stats, shader effects, faders and output" width="2000" height="1267" loading="lazy">
+        <figcaption>The studio during a set: render engine stats, shader effects, faders, output.</figcaption>
+      </figure>
+      <figure class="card" data-lightbox>
+        <img src="media/dz-live-2.jpg" alt="diffuza on an LED installation, control laptop in frame" width="720" height="1280" loading="lazy">
+        <figcaption>Bangkok, 2026.</figcaption>
+      </figure>
+    </div>
+    <div class="duo reveal">
+      <figure class="card chart" aria-labelledby="chart-title">
+        <div class="card__head">
+          <p class="eyebrow">Renderer · Aug 2026</p>
+          <p class="card__title" id="chart-title">Frame time, 512×896, one RTX 5080</p>
+        </div>
+        <div class="bars" role="list">
+          <div class="bars__budget" style="--at-n:0.238" aria-hidden="true"><span class="label">30 fps</span></div>
+          <div class="bar" role="listitem" tabindex="0" style="--w:92.2%" title="Full VAE decode, Aug 23: 129.1 ms"><span class="bar__name">Full VAE · before</span><span class="bar__track"><span class="bar__fill"></span></span><span class="bar__val">129.1 ms</span></div>
+          <div class="bar" role="listitem" tabindex="0" style="--w:39.1%" title="Full VAE decode after optimisation: 54.8 ms"><span class="bar__name">Full VAE · after</span><span class="bar__track"><span class="bar__fill"></span></span><span class="bar__val">54.8 ms</span></div>
+          <div class="bar bar--hi" role="listitem" tabindex="0" style="--w:21.2%" title="Fast decoder plus trained refiner: 29.7 ms"><span class="bar__name">Fast decoder + refiner</span><span class="bar__track"><span class="bar__fill"></span></span><span class="bar__val">29.7 ms</span></div>
+        </div>
+        <figcaption>Measured on the render server, August 2026.</figcaption>
+      </figure>
+      <figure class="card mcp" aria-labelledby="mcp-title">
+        <div class="card__head">
+          <p class="eyebrow">MCP · 16 tools</p>
+          <p class="card__title" id="mcp-title">Connect from Claude Code</p>
+        </div>
+        <pre class="mcp__cmd"><code>claude mcp add --transport http diffuza \
+  https://platform.diffuza.com/api/diffuza/mcp</code></pre>
+        <p class="mcp__tools">discover, describe, read, pipeline, sampler_edit, sampler_action, preset, connections, clock, trigger, renderer, screenshot, assets, upload_image, operation, docs</p>
+        <figcaption>OAuth 2.1 with dynamic client registration and PKCE, so it also works as a claude.ai connector.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- cnvrg -->
+  <article class="work" id="cnvrg">
+    <header class="work__head reveal">
+      <h2>cnvrg</h2>
+      <p class="label work__meta">Founding full-stack engineer · Jan 2025 — Jul 2026 · cnvrg.xyz</p>
+    </header>
+    <figure class="stage stage--wide reveal">
+      <video data-autoplay muted loop playsinline preload="none" poster="media/cn-graph.jpg" width="1280" height="720" aria-label="Screen recording of the cnvrg.xyz graph zooming out from agent cards to the full tree">
+        <source src="media/cn-graph.mp4" type="video/mp4">
+      </video>
+    </figure>
+    <div class="work__body reveal">
+      <p class="work__lede">A multi-agent platform where people and AI agents write into one shared knowledge graph. Agents run on schedules, call tools, generate images, build pipelines for diffuza and open changes to the platform’s code. I built and ran it alone. The clip is a screen recording of the public graph on cnvrg.xyz, November 2026.</p>
+      <ul class="facts">
+        <li><b>860+</b>sign-ups. 225 agents wrote 14,000+ of the graph’s 24,000 nodes and completed 8,000+ scheduled tasks.</li>
+        <li><b>9 model backends</b>behind one streaming interface: OpenAI, Anthropic, Gemini, xAI, OpenRouter and a self-hosted model on my own GPU. About 9,500 logged calls with per-call cost.</li>
+        <li><b>Agent coding</b>Agents open coding tasks; Claude Code works in a separate git worktree, then a merge request, a staging deploy and a check in Chrome by a computer-use agent. 53 agent-written commits are on main.</li>
+        <li><b>Graph renderer</b>Third version, after React Flow and Canvas 2D: instanced WebGL with level of detail, quadtree hit-testing and layout in a Web Worker. Also 13 Docker services, CI, Prometheus, Loki, Grafana, an MCP server and a Solana token layer.</li>
+      </ul>
+    </div>
+    <div class="grid2 reveal">
+      <figure class="card" data-lightbox>
+        <img src="media/cn-graph-ui.webp" alt="The cnvrg graph: agent cards with generated images and the models that made them" width="1800" height="1125" loading="lazy">
+        <figcaption>Graph cards name the agent and model: Gemini and GPT image agents, Claude agents building diffuza pipelines.</figcaption>
+      </figure>
+      <figure class="card" data-lightbox>
+        <img src="media/cn-world.webp" alt="cnvrg multiplayer Unity world" width="1600" height="898" loading="lazy">
+        <figcaption>The multiplayer Unity world, laid out from the embedding space of ~5,000 AI-alignment documents.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- games -->
+  <article class="work" id="games">
+    <header class="work__head reveal">
+      <h2>Banzai Games</h2>
+      <p class="label work__meta">Unity developer · Sep 2021 — Apr 2023 · Shadow Fight: Shades, SPINE</p>
+    </header>
+    <figure class="stage reveal" data-lightbox>
+      <img src="media/gd-spine.webp" alt="SPINE, gun-fu action game" width="1920" height="1080" loading="lazy">
+      <figcaption class="stage__cap label">SPINE · I built the early Unity combat prototype</figcaption>
+    </figure>
+    <div class="work__body reveal">
+      <p class="work__lede">Two years in a studio team on Shadow Fight: Shades, a live game with a 7-year-old codebase, working with game designers, QA and other engineers. Then the early combat prototype for SPINE, before the project moved to Unreal.</p>
+      <ul class="facts">
+        <li><b>10M+</b>downloads. Combat systems, in-game shop and skill progression for Shadow Fight: Shades.</li>
+        <li><b>Refactoring</b>Moved legacy code to a new architecture and rewrote the combat and animation systems.</li>
+        <li><b>Replays</b>Record and replay from scratch: action recording, playback and full state sync, used by the team to debug combat.</li>
+        <li><b>Tools</b>Visual debugging of animation and move state machines for designers.</li>
+      </ul>
+    </div>
+  </article>
+
+  <!-- earlier games and simulation -->
+  <article class="work" id="earlier">
+    <header class="work__head reveal">
+      <h2>Vizex</h2>
+      <p class="label work__meta">Unity developer · Jan — Sep 2021 · vizex.ru</p>
+    </header>
+    <div class="work__body work__body--top reveal">
+      <p class="work__lede">Virtual physics and chemistry labs for Moscow schools, built in Unity for WebGL, with physically correct simulations and tools for setting them up and debugging them. Also an interactive monitoring view for EMIAS, Moscow’s healthcare IT system.</p>
+      <p class="work__note">Before that, my first game job: <b>Artifice</b>, a mobile MOBA startup on Unity and Photon Quantum with deterministic ECS netcode, May 2020 — Jan 2021.</p>
+    </div>
+    <div class="grid3 reveal">
+      <figure class="card" data-lightbox>
+        <img src="media/vz-chem.webp" alt="Vizex organic chemistry lab: molecule builder in a spaceship interior" width="2000" height="1113" loading="lazy">
+        <figcaption>Organic chemistry lab.</figcaption>
+      </figure>
+      <figure class="card" data-lightbox>
+        <img src="media/vz-labs.webp" alt="Vizex lab catalogue: electrodynamics, thermodynamics, optics, mechanics, Faraday, inorganic chemistry" width="2000" height="1050" loading="lazy">
+        <figcaption>Lab catalogue.</figcaption>
+      </figure>
+      <figure class="card" data-lightbox>
+        <img src="media/vz-emias.webp" alt="EMIAS infrastructure monitoring view" width="2000" height="1088" loading="lazy">
+        <figcaption>EMIAS monitoring.</figcaption>
+      </figure>
+    </div>
+  </article>
+
+  <!-- other projects -->
+  <section class="other" id="other" aria-labelledby="other-title">
+    <h2 id="other-title" class="reveal">Other projects</h2>
+
+    <div class="proj reveal">
+      <div class="proj__text">
+        <h3>Dream Actively</h3>
+        <p class="label">Contract · React Native · 2026 — now</p>
+        <p>A guided sound-practice app. I rebuilt it from scratch and had it live on the App Store and Google Play in two weeks: auth, server-side progression, in-app purchases through RevenueCat. In November 2026 it moved to a new UI, with an AI reflection companion.</p>
+      </div>
+      <div class="phones">
+        <figure data-lightbox><img src="media/da-welcome.webp" alt="Dream Actively welcome screen" width="640" height="1385" loading="lazy"></figure>
+        <figure data-lightbox><img src="media/da-home.webp" alt="Dream Actively home screen with the day path" width="640" height="1385" loading="lazy"></figure>
+        <figure data-lightbox><img src="media/da-practice.webp" alt="Dream Actively practice player" width="640" height="1385" loading="lazy"></figure>
+        <figure data-lightbox><img src="media/da-paywall-level1.webp" alt="Dream Actively purchase screen" width="640" height="1385" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="proj reveal">
+      <div class="proj__text">
+        <h3>RT</h3>
+        <p class="label">School 21, Moscow · C · OpenCL</p>
+        <p>A GPU path tracer written from scratch in a team: OpenCL kernels, a kd-tree, OBJ loading and PBR materials.</p>
+      </div>
+      <div class="grid3">
+        <figure data-lightbox><img src="media/rt-1.webp" alt="RT render: glass and plastic spheres" width="2000" height="1037" loading="lazy"></figure>
+        <figure data-lightbox><img src="media/rt-0.webp" alt="RT render: Cornell box" width="2000" height="1014" loading="lazy"></figure>
+        <figure data-lightbox><img src="media/rt-4.webp" alt="RT render: statue mesh" width="1912" height="998" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <ol class="index__list reveal">
+      <li><span class="index__name">zavod.ai</span><span class="index__what">Visual pipeline engine for LLM code generation with runtime UI compilation, and real-time co-editing of nested no-code graphs.</span><span class="label">TypeScript · Jun 2023 — Oct 2024</span></li>
+      <li><span class="index__name">ACE Framework</span><span class="index__what">Contributed to the first iteration of the open-source Autonomous Cognitive Entity framework.</span><span class="label">Python · 2023</span></li>
+      <li><span class="index__name">NTProgress</span><span class="index__what">C and C++ work on a FOREX trading terminal.</span><span class="label">C / C++ · Aug — Oct 2019</span></li>
+    </ol>
+  </section>
+
+  <section class="how" aria-labelledby="how-title">
+    <h2 id="how-title" class="reveal">Working style</h2>
+    <dl class="how__list reveal">
+      <div><dt>AI agents</dt><dd>I use coding agents every day. I write the specs, design the architecture and review every change.</dd></div>
+      <div><dt>Shipping</dt><dd>Small changes, CI, monitoring, and checks on real devices before a change counts as done.</dd></div>
+      <div><dt>Remote</dt><dd>English C1/C2. Bangkok, UTC+7. Used to async work and written updates.</dd></div>
+      <div><dt>Stack</dt><dd>C#, TypeScript, Python, C++. Unity, Three.js, ASP.NET Core, Node, Docker, PyTorch, TensorRT.</dd></div>
+    </dl>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <h2 id="contact-title" class="contact__line reveal">Get in touch.</h2>
+    <div class="contact__actions reveal">
+      <a class="btn btn--accent btn--lg" href="https://calendly.com/oleg-pustogachev/30min" target="_blank" rel="noopener">Book a 30-min call</a>
+      <button class="btn btn--ghost btn--lg copybtn" type="button" data-copy="oleg.pustogachev@gmail.com"><span class="copybtn__label">Copy email</span></button>
+    </div>
+    <p class="sr-only" id="copy-status" aria-live="polite"></p>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="foot__mast">
+    <p class="foot__word">Oleg Pustogachev</p>
+    <p class="foot__tag">Full-stack engineer · Bangkok, UTC+7</p>
+  </div>
+  <nav class="foot__links" aria-label="Elsewhere">
+    <a href="Oleg_Pustogachev_CV.pdf" download>CV</a>
+    <a href="https://github.com/rearming" target="_blank" rel="noopener">GitHub</a>
+    <a href="https://t.me/inkpaper" target="_blank" rel="noopener">Telegram</a>
+    <a href="https://www.linkedin.com/in/oleg-pustogachev-315ba41a4" target="_blank" rel="noopener">LinkedIn</a>
+  </nav>
+</footer>
+
+<dialog class="lightbox" id="lightbox">
+  <button class="btn btn--ghost lightbox__close" type="button">Close</button>
+  <img alt="">
+  <p class="lightbox__cap"></p>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
